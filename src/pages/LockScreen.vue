@@ -34,9 +34,7 @@
 							dark
 							v-model="email"
 							color="white"
-							type="email"
-							placeholder="Entre com o email"
-							:rules="emailRules"
+							placeholder="Entre com o Id"
 						/>
 						<q-input
 							dark
@@ -57,7 +55,7 @@
 							</template>
 						</q-input>
 						<q-btn
-							to="/"
+							@click="login()"
 							round
 							flat
 							color="blue-3"
@@ -85,6 +83,8 @@
 <script>
 import { defineComponent } from "vue";
 import { ref } from "vue";
+import Installer from '../service/installers'
+import axios from 'axios';
 
 export default defineComponent({
 	name: "LockScreen",
@@ -111,6 +111,16 @@ export default defineComponent({
 			}
 		},
 	},
+  methods: {
+    login() {
+      const headers = {
+        "id": 2,
+        "password": "oX#7PXpx"
+      };
+      axios.post("https://connet-app.herokuapp.com/connet-app/api/connet/v1/installer/installers/login", { headers })
+        .then(response => console.log(response));
+    }
+  },
 });
 </script>
 
