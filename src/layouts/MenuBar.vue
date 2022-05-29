@@ -7,21 +7,17 @@
       align="justify"
       class="absolute-bottom menuBar"
     >
-      <q-route-tab name="plans" to="/">
-        <img alt="Icone Plans" src="~assets/Plans.svg" />
-        <span>Plans</span>
-      </q-route-tab>
-      <q-route-tab name="maps" to="/map" active-color="blue-grey-1">
-        <img alt="Icone Maps" src="~assets/Maps.svg" />
-        <span>Maps</span>
-      </q-route-tab>
-      <q-route-tab name="order" to="/order">
+      <q-route-tab name="order" to="/">
         <img alt="Icone Order" src="~assets/Order.svg" />
-        <span>Order</span>
+        <span>Pedidos</span>
       </q-route-tab>
-      <q-route-tab name="profile" to="/Register">
+      <q-route-tab name="history" to="/hist" active-color="blue-grey-1">
+        <img alt="Icone History" src="~assets/hist.svg" />
+        <span>Pendentes</span>
+      </q-route-tab>
+      <q-route-tab name="profile" @click="$q.fullscreen.toggle()">
         <img alt="Icone Profile" src="~assets/Profile.svg" />
-        <span>Profile</span>
+        <span>Perfil</span>
       </q-route-tab>
     </q-tabs>
     <q-page-container>

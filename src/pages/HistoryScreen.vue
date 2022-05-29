@@ -1,9 +1,9 @@
 <template>
   <q-page class="flex flex-center " style="align-content: flex-start;">
     <div class="boxTitle" style="position: absolute; top: 0; left: 0; right: 0">
-      <h1 class="title" style="padding-left: 30px">Meus Pedidos</h1>
+      <h1 class="title" >Pedidos Pendentes</h1>
     </div>
-    <div class="scroll" style="margin-top: 100px;">
+     <div class="scroll" style="margin-top: 100px;">
       <card-item
         v-for="(c, index) in client"
         :key="index"
@@ -65,7 +65,7 @@
           <q-space />
 
           <div class="row lineInfo" >
-            <q-btn color="secondary" label="Aceitar" style="margin: 30px 0"/>
+            <q-btn color="secondary" label="Aceitar" style="margin: 30px 0" />
           </div>
         </q-card-section>
       </q-card>
@@ -122,7 +122,7 @@ import { defineAsyncComponent, defineComponent } from "vue";
 import { ref } from 'vue'
 
 export default defineComponent({
-  name: "OrderScreen",
+  name: "HistoryScreen",
   components: {
     CardItem: defineAsyncComponent(() => import("components/CardItem")),
   },

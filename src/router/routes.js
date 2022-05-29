@@ -5,7 +5,8 @@ const routes = [
     component: () => import("src/layouts/MenuBar.vue"),
     children: [
       { path: "", component: () => import("src/pages/OrderScreen.vue") },
-      { path: "/map", component: () => import("src/pages/MapScreen.vue") },
+      { path: "/hist", component: () => import("src/pages/HistoryScreen.vue") },
+      { path: "/profile", component: () => import("src/pages/IndexPage.vue") },
     ],
   },
 
