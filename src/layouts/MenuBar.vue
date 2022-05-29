@@ -15,7 +15,7 @@
         <img alt="Icone History" src="~assets/hist.svg" />
         <span>Pendentes</span>
       </q-route-tab>
-      <q-route-tab name="profile" @click="$q.fullscreen.toggle()">
+      <q-route-tab name="profile" to="/profile">
         <img alt="Icone Profile" src="~assets/Profile.svg" />
         <span>Perfil</span>
       </q-route-tab>

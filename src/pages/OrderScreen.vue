@@ -65,7 +65,7 @@
           <q-space />
 
           <div class="row lineInfo" >
-            <q-btn color="secondary" label="Aceitar" style="margin: 30px 0"/>
+            <q-btn label="Atualizar Status" style="background: #3caef0; color: #fff; margin: 30px 0"/>
           </div>
         </q-card-section>
       </q-card>
