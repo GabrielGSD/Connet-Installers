@@ -3,6 +3,16 @@
 		<q-page-container>
 			<q-page class="flex flex-center">
 				<q-card class="bg-transparent no-border no-shadow">
+					<h1
+						class="title"
+						style="
+							color: #fff;
+							font-size: 2.3rem;
+							text-align: center;
+						"
+					>
+						Login
+					</h1>
 					<q-card-section class="text-center">
 						<q-avatar
 							size="130px"
@@ -55,6 +65,17 @@
 							icon="arrow_right_alt"
 						></q-btn>
 					</q-card-section>
+
+					<span
+						@click="$router.push('/Register')"
+						style="
+							color: #fff;
+							display: inline-block;
+							width: 100%;
+							text-align: center;
+						"
+						>Cadastrar conta?</span
+					>
 				</q-card>
 			</q-page>
 		</q-page-container>
