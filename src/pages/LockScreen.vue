@@ -32,7 +32,7 @@
 					<q-card-section class="text-center">
 						<q-input
 							dark
-							v-model="email"
+							v-model="id"
 							color="white"
 							placeholder="Entre com o Id"
 						/>
@@ -91,7 +91,7 @@ export default defineComponent({
 
 	setup() {
 		return {
-			email: ref(""),
+			id: ref(""),
 			password: ref(""),
 			isPwd: ref("password"),
 			isEmail: ref("email"),
@@ -113,13 +113,25 @@ export default defineComponent({
 	},
   methods: {
     login() {
-      const headers = {
-        "id": 2,
-        "password": "oX#7PXpx"
-      };
-      axios.post("https://connet-app.herokuapp.com/connet-app/api/connet/v1/installer/installers/login", { headers })
-        .then(response => console.log(response));
-    }
+      fetch("https://connet-app.herokuapp.com/connet-app/api/connet/v1/installer/installers/login/id="+this.id + "/password="+this.password,
+      { method: "POST",
+        headers:  { "Content-Type": "application/json" }
+      })
+      .then(response => response.json())
+      .then(data => {
+        window.console.log(data)
+      }).catch(error => {
+        window.console.log(error);
+        alert("Erro de servidor ao carregar as informações por favor tente novamente")
+        //location.reload()
+      })
+
+    },
+    teste() {
+       const article = { id: this.id, password: this.password };
+        axios.post("https://connet-app.herokuapp.com/connet-app/api/connet/v1/installer/installers/login", article)
+        .then(response => console.log(response));;
+    },
   },
 });
 </script>
