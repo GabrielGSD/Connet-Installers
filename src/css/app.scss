@@ -1,1 +1,65 @@
-// app global css in SCSS form
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+body {
+  background-color: #f4f6f9;
+  font-family: "Roboto", sans-serif;
+  color: #303030;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  padding: 1.5rem;
+  padding-left: 15px;
+}
+
+.q-tab__indicator {
+  color: #3caef0 !important;
+}
+
+.cardAzul {
+  background: url("../assets/Efeito.png"),
+    radial-gradient(
+      90.16% 143.01% at 15.32% 21.04%,
+      rgba(165, 239, 255, 0.7) 0%,
+      rgba(110, 191, 244, 0.2) 77.08%,
+      rgba(70, 144, 213, 0.02) 100%
+    );
+  background-blend-mode: overlay, normal;
+  box-shadow: 3px 4px 6px rgba(109, 109, 109, 0.25);
+  border-radius: 20px;
+  width: 80px !important;
+  height: 110px !important;
+}
+
+.types {
+  padding: 10px;
+}
+
+.types .swiper-wrapper {
+  margin-left: -55px !important;
+  justify-content: center !important;
+}
+
+.plans {
+  background: #fff;
+  box-shadow: 3px 4px 6px rgba(109, 109, 109, 0.35);
+  border-radius: 0 0 20px 20px;
+}
+
+.boxTitle {
+  background: linear-gradient(315deg, #8bdfed 0%, #3baeef 100%);
+  color: #fff;
+  box-shadow: 3px 4px 6px rgba(109, 109, 109, 0.35);
+  border-radius: 0 0 30px 30px;
+}
+.plans .swiper-pagination {
+  bottom: 12px !important;
+}
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
